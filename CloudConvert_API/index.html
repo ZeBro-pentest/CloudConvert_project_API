@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.I.T project №1</title>
+    <link rel="icon" type="image/jpeg" href="image/logo.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="image/logo.jpg" alt="M.I.T Logo">
+            </div>
+            <div class="header-text">
+                <p class="project-label">Project name:</p>
+                <h1>Cloudconvert API</h1>
+            </div>
+        </header>
+        <main>
+            <aside class="sidebar">
+                <div class="doc-card">
+                    <h2>Documentation:</h2>
+                    <h3 class="doc-subtitle">Цель проекта</h3>
+                    <p class="doc-text">Простое веб-приложение для практики работы с внешним API.</p>
+                    <p class="doc-text">Позволяет загружать файлы и конвертировать их в другие форматы через CloudConvert Api</p>
+                    <h3 class="doc-subtitle">Основной функционал</h3>
+                    <p class="doc-text">
+                    -- Загрузка файла до 100 мб<br>
+                    -- Проверка размера и типа<br>
+                    -- Выбор формата конвертации<br>
+                    -- Отслеживание прогресса<br>
+                    -- Скачивание результата</p>
+                    <h3 class="doc-subtitle">Поддерживаемые форматы</h3>
+                    <p class="doc-text">
+                    Документы: PDF, DOC, DOCX<br>
+                    Изображения: JPG, PNG, GIF<br>
+                    Видео: MP4, AVI, MKV<br>
+                    Аудио: MP3, WAV, AAC<br>
+                    Архивы: ZIP, RAR, 7Z</p>
+                </div>
+            </aside>
+            <section class="content">
+                <div class="converter-wrapper">
+                    <div class="buttons-row">
+                        <!-- Кнопка выбор файла -->
+                        <button class="btn-red" id="selected_file">
+                            Select file
+                            <img src="image/arrow-right.png">
+                        </button>
+                        <span class="max-size">Max file size - 100 MB</span>
+                        <!-- Кнопка конвертации -->
+                        <button class="btn-red" id="convert_btn">
+                            Convert to
+                            <img src="image/angle-small-down.png">
+                        </button>
+                        <input type="file" id="file_input" style="display:none">
+                    </div>
+
+                    <!-- Карточка файла -->
+                    <div class="file-card">
+                        <div class="file-icon">
+                            <img src="image/document.png">
+                        </div>
+                        <div class="file-info">
+                            <div class="file-headers">
+                                <span>Name</span>
+                                <span>Type</span>
+                                <span>Size</span>
+                            </div>
+                            <div class="file-values">
+                                <span id="file_name"></span>
+                                <span id="type"></span>
+                                <span id="size"></span>
+                            </div>
+                        </div>
+                        <div class="file-actions">
+                            <button class="icon-btn" id="refresh_file">
+                                <img src="image/refresh.png">
+                            </button>
+                            <button class="icon-btn" id="close_file">
+                                <img src="image/cross.png">
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Кнопка загрузки -->
+                    <button class="btn-download" id="download_btn" disabled>
+                        Download
+                        <img src="image/download.png" class="download-icon">
+                    </button>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>M.I.T - Mentorship. Innovation. Teamwork</p>
+            <div class="year">
+                <span>© 2025</span>
+            </div>
+        </footer>
+    </div>
+    <script src="DEMO.js"></script>
+</body>
+</html>
